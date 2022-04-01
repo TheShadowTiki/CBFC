@@ -1,18 +1,9 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Feb 23 17:02:50 2022
-
-@author: mikoz
-"""
-
 import matplotlib.pyplot as plt
 import igraph
 from igraph import plot,layout,Graph,summary
 from itertools import combinations
 from collections import Counter, OrderedDict
 import random
-#test_param = ['t1', 't2', 't3']
-#scores = []
 
 def get_params(num_params):
     test_params = []
@@ -66,7 +57,6 @@ pnum = 4
 cnum = 3
 test = get_params(pnum)
 score_ls = get_scores(test)
-#score_ls = [5, 4, 3, 1, 6, 7, 3, 2, 4, 6, 6, 2, 4, 1, 8, 5, 4, 3, 2, 5]
 clust_ls = get_clusters(cnum, test)
     
 gr = Graph(sum(score_ls))
@@ -116,7 +106,7 @@ def clustering(g):
     return ug
 graphs =[gr]
 i = 0.5
-#while graphs[-1].get_edgelist() != []:
+
 for l in range(1):
     graphs.append(clustering(gr))
     gr = graphs[-1]
@@ -132,12 +122,3 @@ for gra in graphs:
         plot(gra, target=ax2, layout=gra.layout('circle'), vertex_label=gra.vs['name'], edge_width=0.5, vertex_label_size=20)    
 ax1.axis('off')
 ax2.axis('off')  
-#plot(g, target=ax1, layout=lay1, vertex_label=g.vs['name'])
-#ax1.axis('off') 
-#lay2 = ug.layout('kk')
-
-
-#plot(ug, target=ax2, layout=lay2, vertex_label=ug.vs['name'], )
-
-#ax2.axis('off')
-
