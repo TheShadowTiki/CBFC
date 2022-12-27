@@ -180,8 +180,5 @@ class Graph():
             gr.add_node(n)
         gr.add_weighted_edges_from(edges)
         plt.rcParams["figure.figsize"] = figsize
-        #if forced_layout == None:
-        nx.draw(gr, pos=forced_layout(gr), labels={self.nodes.index(n): n.label for n in self.nodes}, with_labels=True, **kwargs)
-        #else:
-        #    forced_layout(gr, labels={self.nodes.index(n): n.label for n in self.nodes}, with_labels=True, **kwargs)
+        nx.draw(gr, pos=forced_layout(gr) if forced_layout != None else None, labels={self.nodes.index(n): n.label for n in self.nodes}, with_labels=True, **kwargs)
         plt.show()
