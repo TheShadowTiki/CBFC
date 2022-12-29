@@ -9,7 +9,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import networkx as nx
 from itertools import chain
-import random
 
 class Node():
     """Node for use in a graph or network.
