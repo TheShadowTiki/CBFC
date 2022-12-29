@@ -5,7 +5,7 @@ The formulation of Center-Based Frequency Clustering (CBFC) was motivated in lar
 * Edges are assigned incident to nodes/parameters that occur in the same map.
 * Edges are given a weight with an anti-correlation to the number of maps shared by incident nodes
 
-The CBFC algorithm was then designed to isolate the nodes corresponding to the testing parameters the user would most benefit from practicing by taking into account the current score for each parameter (judging node frequency) and the likelyhood that testing one high-scoring parameter would cause the testing of another high-scoring parameter by means of occurence in the same map (judging how embeded the parameter's clique was in the graph using the graph-theoretic center).
+The CBFC algorithm was then designed to consolidate the nodes corresponding to the testing parameters the user would most benefit from practicing by taking into account the current score for each parameter (judging node frequency) and the likelyhood that testing one high-scoring parameter would cause the testing of another high-scoring parameter by means of occurence in the same map (judging how embeded the parameter's clique was in the graph using the graph-theoretic center).
 
 The psuedocode for the algorithm is pictured here in the poster used for publication:
 
