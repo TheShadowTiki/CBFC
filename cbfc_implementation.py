@@ -7,6 +7,7 @@ Created on Sun Dec 25 23:28:29 2022
 
 from graph import *
 from itertools import chain
+import random
 
 """
 The formulation of Center-Based Frequency Clustering (CBFC) was motivated in
