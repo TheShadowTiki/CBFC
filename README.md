@@ -10,4 +10,36 @@ The CBFC algorithm was then designed to consolidate the nodes corresponding to t
 The pseudocode for the algorithm is pictured here in the poster used for publication:
 
 ![DrivingSimulator USF Poster](https://user-images.githubusercontent.com/78307866/209899836-d97f961a-1637-4709-85e1-77faf621267d.jpg)
+
+# Contents
+* graph.py
+  * Node class: Locally designed node class for use in graph class.
+  * Graph class: Locally designed graph class.
+    * Specialized Methods:
+      * Dijkstra's Algorithm
+      * CBFC
+      * View (using networkx and matplotlib.pyplot)
+  * Required modules:
+      * numpy
+      * matplotlib.pyplot
+      * networkx
+      * itertools.chain
+* cbfc_implementation.py
+  * Implementation of CBFC algorithm within the driving simulator context described above.
+  * Required modules:
+    * graph (local)
+    * itertools.chain
+    * random
+
+# Use Examples
+Graphs can be created from a list of Node objects or by specifying the number of nodes the graph should contain.
+
+![image](https://user-images.githubusercontent.com/78307866/209971873-ffbb69d0-5e05-4cab-8531-528cc18c45d3.png)
+
+![image](https://user-images.githubusercontent.com/78307866/209971897-aa628ba0-3c37-44b4-b967-327b0cdf7816.png)
+
+To tinker with CBFC in its intended application, modify the "scores" and "maps" collections in the cbfc_implementation.py file.
+
+![image](https://user-images.githubusercontent.com/78307866/209973215-e074e990-e532-49a8-a641-d16af3bbed76.png)
+
 [MIT licensed](./LICENSE) © 2022 [Malik Zekri](https://github.com/TheShadowTiki)
